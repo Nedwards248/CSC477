@@ -3,55 +3,55 @@
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   <script>
-            window.onload = function () {
-                document.querySelectorAll(".audio-button").forEach(function (button) {
-                    button.addEventListener("click", function () {
-                        var audioFile = this.getAttribute("data-audio");
-                        var audio = new Audio(audioFile);
-                        audio.play();
-                    });
+        window.onload = function () {
+            document.querySelectorAll(".audio-button").forEach(function (button) {
+                button.addEventListener("click", function () {
+                    var audioFile = this.getAttribute("data-audio");
+                    var audio = new Audio(audioFile);
+                    audio.play();
                 });
-            };
-        </script>
-        <style>
-            .buttons {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                height: 20em;
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                grid-template-rows: repeat(2, 1fr);
-                justify-items: center;
-                align-items: center;
-                z-index: 10;
-            }
-            .audio-button {
-                padding: 0.25em;
-                border-radius: 4px;
-                border: 2px solid black;
-                background: white;
-                color: black;
-                width: 10em;
-                height: 5em;
-                margin: 0.5em;
-            }
-        </style>
-        <body style="margin : 0px; overflow: hidden;">
-            <div class="buttons">
-                <button class="audio-button" data-audio="./info/Acer_Rubrum.mp3">Red Maple</button>
-                <button class="audio-button" data-audio="./info/Gallotannins.mp3">Gallotannins</button>
-                <button class="audio-button" data-audio="./info/Dr. Navindra Seeram.mp3">Speaker Bio</button>
-                <button class="audio-button" data-audio="./info/Ku-jin Tea.mp3">Ku-jin Tea</button>
-                <button class="audio-button" data-audio="./info/Ginnalin A.mp3">Ginnalin A</button>
-                <button class="audio-button" data-audio="./info/Cosmetic Use.mp3">Wrinkle Cream</button>
-            </div>
+            });
+        };
+    </script>
+    <style>
+        .buttons {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 20em;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            justify-items: center;
+            align-items: center;
+            z-index: 10;
+        }
+        .audio-button {
+            padding: 0.25em;
+            border-radius: 4px;
+            border: 2px solid black;
+            background: white;
+            color: black;
+            width: 10em;
+            height: 5em;
+            margin: 0.5em;
+        }
+    </style>
+    <body style="margin : 0px; overflow: hidden;">
+        <div class="buttons">
+            <button class="audio-button" data-audio="./info/Acer_Rubrum.mp3">Red Maple</button>
+            <button class="audio-button" data-audio="./info/Gallotannins.mp3">Gallotannins</button>
+            <button class="audio-button" data-audio="./info/Dr. Navindra Seeram.mp3">Speaker Bio</button>
+            <button class="audio-button" data-audio="./info/Ku-jin Tea.mp3">Ku-jin Tea</button>
+            <button class="audio-button" data-audio="./info/Ginnalin A.mp3">Ginnalin A</button>
+            <button class="audio-button" data-audio="./info/Cosmetic Use.mp3">Wrinkle Cream</button>
+        </div>
     <a-scene embedded arjs>
-        <a-marker type="pattern" preset="custom" url="https://github.com/Nedwards248/CSC477/blob/main/info/bit.ly_480Qrar.png">
-            <a-image id="press-here" geometry="primitive: plane" src="./info/RedMapleFlyer2.png" rotation="-90 0 0" width="2" height="1.5" position='0 0 0'></a-image>
-        </a-marker>
-        <a-entity camera></a-entity>
+        <a-marker type="pattern" preset="hiro">
+        <a-image id="press-here" geometry="primitive: plane" src="./info/RedMapleFlyer2.png" rotation="-90 0 0" width="2" height="1.5" position='0 0 0'></a-image>
+      </a-marker>
+      <a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
