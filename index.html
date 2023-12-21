@@ -18,7 +18,7 @@
             .selection-button {
                 background: #333;
                 color: white;
-                width: 34vw;
+                width: 34vw; /* Change this to '8em' if this isn't functioning to give the buttons a 3rd of the screen */
                 height: 3em;
                 border: 3px solid black;
             }
@@ -44,13 +44,11 @@
         </style>
     </head>
     <body style="margin : 0px; overflow: hidden;">
-        <div class="selection-button">
-            <button class="selection-button back-button" data-link="#">Back</button>
-            <button class="selection-button next-button" data-link="#">Next</button>
-            <button class="selection-button home-button" data-link="https://madisonpjones.com/projects/pharmacy/">Home</button>
-        </div>
+        <button class="selection-button back-button" data-link="#">Back</button>
+        <button class="selection-button next-button" data-link="#">Next</button>
+        <button class="selection-button home-button" data-link="https://madisonpjones.com/projects/pharmacy/">Home</button>
         <a-scene embedded arjs>
-            <a-marker type="pattern" preset="hiro">
+            <a-marker type="pattern" preset="hiro" cursor='rayOrigin: mouse'>
                 <a-image id="press-here" geometry="primitive: plane" src="./info/RedMapleFlyer2.png" rotation="-90 0 0" width="2" height="1.5" position='0 0 0'></a-image>
             </a-marker>
             <a-entity camera></a-entity>
